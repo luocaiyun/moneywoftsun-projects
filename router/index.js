@@ -1,14 +1,18 @@
 import Vue from 'vue'
-import VueRouter from "vue-router"
-import my from '../views/my';
-Vue.use(VueRouter);
+import VueRouter from 'vue-router'
+import Login from '../src/views/login'
+import Register from '../src/views/register'
+import setPass from '../src/views/setPass'
 
-let router=new VueRouter({
+Vue.use(VueRouter)
+
+let router = new VueRouter({
     routes:[
-        {
-            path:'/',
-            component:my
-        }
+        {path:"/login",component:Login},
+        {path:"/reg",component:Register},
+        {path:"/set",component:setPass}
+        // {path:"/set",component:setPass}
     ]
-});
-export default router;
+})
+
+export default router
