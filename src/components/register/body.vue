@@ -1,6 +1,6 @@
 <template>
   <div class="log-body">
-      <img src="../../../public/assets/imges/login/logo2.png">
+      <img src="../../../public/assets/images/login/logo2.png">
         <div class="ror">
             <p :class="show?'show':'trewq'" @click="updater">注册</p>
             <p :class="show?'trewq':'show'" @click="updatep">忘记密码</p><br>
@@ -47,7 +47,7 @@ export default {
         },
         checkIn(){
             if(this.flagName){
-                Reg.checkUserCode(this.telephone,this.code,this.content,(data)=>{
+                Reg.checkUserCode(this.telephone,this.code,this.content,this.$route.query.id,(data)=>{
                     window.console.log(data)
                 })
                 this.$router.push("/set")

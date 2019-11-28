@@ -36,11 +36,12 @@
     color: black;
 }
 .info-docs>div{
-    width: 33%;
+    width: 30%;
+    text-align: center;
 }
-    .info-docs>.active{
-        color: rgb(240,98,53);
-        font-weight: 600;
-        border-bottom: 0.015rem solid rgb(240,98,53);
-    }
+.info-docs>.active{
+    color: rgb(240,98,53);
+    font-weight: 600;
+    border-bottom: 0.015rem solid rgb(240,98,53);
+}
 </style>

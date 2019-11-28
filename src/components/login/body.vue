@@ -1,6 +1,6 @@
 <template>
   <div class="log-body">
-      <img src="../../../public/assets/imges/login/logo2.png">
+      <img src="../../../public/assets/images/login/logo2.png">
       <div id="ipt">
           <span class="iconfont icon-shouji"></span>
           <input type="number" placeholder="请输入手机号" class="tel" v-model="telephone" @change="ckNumber">

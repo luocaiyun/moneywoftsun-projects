@@ -2,10 +2,10 @@
     <div>
         <div class="bg_img2" v-if="flag">
         <div class="img">
-            <img src="../../../public/assets/imges/logo2.png" alt="logo">
+            <img src="../../../public/assets/images/logo2.png" alt="logo">
         </div>
         <div class="login">
-            <img src="../../../public/assets/imges/login_btn.png" alt="login">
+            <img src="../../../public/assets/images/login_btn.png" alt="login" @click="goto">
         </div>
         <span class="world">点此查看您的资产情况</span>
         </div>
@@ -13,9 +13,9 @@
 
         <div class="bg_img" v-else>
         <div class="img_2">
-                <img src="../../../public/assets/imges/logo2.png" alt="logo">
+                <img src="../../../public/assets/images/logo2.png" alt="logo">
                 <span class="num">{{user}}</span>
-                <span class="small_left"><img src="../../../public/assets/imges/item_right_arrow.png" alt="logo"></span>
+                <span class="small_left"><img src="../../../public/assets/images/item_right_arrow.png" alt="logo"></span>
                 <span class="certification">实名认证</span>
                 <span class="left-small"></span>
         </div>
@@ -37,10 +37,10 @@
             </li>
             <li class="list_li_2">
                 <span class="bg_3"></span>
-                <a href="#">设置</a>
+                <a href="#/setting">设置</a>
                 <span class="bg_4"></span>
             </li>
-            <li class="list_li_3">
+            <li class="list_li_3" v-if="user">
                 <span class="bg_5"></span>
                 <a href="#">退出</a>
                 <span class="bg_6"></span>
@@ -71,6 +71,9 @@
                     this.flag=true
                 }
             },
+            goto(){
+              this.$router.replace("login")
+            },
 
             showmoney(){
                 if (this.flag1==false){
@@ -86,7 +89,11 @@
                 let str2 = this.user.substr(0,3)+"****"+this.user.substr(7);
                 this.user = str2;
                 console.log(str2)
-            }
+            },
+            // goto(){
+            //     // this.$router.push("/setting")
+            //     location.href="#/setting"
+            // }
         },
         created() {
             this.checklocstorange()
@@ -108,7 +115,7 @@
 }
 .bg_img{
     display: block;
-    background-image: url("../../../public/assets/imges/querysellect_head_bg.png");
+    background-image: url("../../../public/assets/images/querysellect_head_bg.png");
     background-size: 100% 100%;
     width: 3.8rem;
     height: 3.5rem;
@@ -149,7 +156,7 @@
     background-size: 100% 100%;
     width: 0.24rem;
     height: 0.18rem;
-    background-image: url("../../../public/assets/imges/oldage_mine_asset_eyeoff.png");
+    background-image: url("../../../public/assets/images/oldage_mine_asset_eyeoff.png");
 }
 .eays1{
     display: block;
@@ -159,13 +166,13 @@
     background-size: 100% 100%;
     width: 0.24rem;
     height: 0.18rem;
-    background-image: url("../../../public/assets/imges/oldage_mine_asset_eyeon.png");
+    background-image: url("../../../public/assets/images/oldage_mine_asset_eyeon.png");
 }
 .bg_img2{
     display: block;
-    background-image: url("../../../public/assets/imges/querysellect_head_bg.png");
+    background-image: url("../../../public/assets/images/querysellect_head_bg.png");
     background-size: 100% 100%;
-    width: 3.8rem;
+    width: 100%;
     height: 2rem;
 }
 .img_2{
@@ -200,7 +207,7 @@
 }
 .small_left{
     display: inline-block;
-    background-image: url("../../../public/assets/imges/item_right_arrow.png");
+    background-image: url("../../../public/assets/images/item_right_arrow.png");
     background-size: 100% 100%;
     width: 0.09rem;
     height: 0.08rem;
@@ -209,7 +216,7 @@
     top: -0.03rem;
 }
 .certification{
-    background-image: url("../../../public/assets/imges/salary_title_background.png");
+    background-image: url("../../../public/assets/images/salary_title_background.png");
     background-size: 100% 100%;
     width: 0.8rem;
     height: 0.22rem;
@@ -223,7 +230,7 @@
 }
 .left-small{
     display: inline-block;
-    background-image: url("../../../public/assets/imges/white_arrow_right.png");
+    background-image: url("../../../public/assets/images/white_arrow_right.png");
     background-size: 100% 100%;
     width: 0.09rem;
     height: 0.08rem;
@@ -252,7 +259,6 @@
       display: flex;
     justify-content: space-between;
     }
-
     .list_li a{
           font-size: 0.18rem;
           color: black;
@@ -282,7 +288,7 @@
 }
     .bg_1{
         display: inline-block;
-        background-image: url("../../../public/assets/imges/客服.png");
+        background-image: url("../../../public/assets/images/客服.png");
         background-size: 100% 100%;
         width: 0.28rem;
         height: 0.26rem;
@@ -292,7 +298,7 @@
     }
     .bg_2{
         display: inline-block;
-        background-image: url("../../../public/assets/imges/item_right_arrow.png");
+        background-image: url("../../../public/assets/images/item_right_arrow.png");
         background-size: 100% 100%;
         width: 0.13rem;
         height: 0.15rem;
@@ -303,7 +309,7 @@
 
 .bg_3{
     display: inline-block;
-    background-image: url("../../../public/assets/imges/z89d8c5978be3c31fd4e1db2fa34bc1f3.png");
+    background-image: url("../../../public/assets/images/z89d8c5978be3c31fd4e1db2fa34bc1f3.png");
     background-size: 100% 100%;
     width: 0.28rem;
     height: 0.26rem;
@@ -313,7 +319,7 @@
 }
 .bg_4{
     display: inline-block;
-    background-image: url("../../../public/assets/imges/item_right_arrow.png");
+    background-image: url("../../../public/assets/images/item_right_arrow.png");
     background-size: 100% 100%;
     width: 0.13rem;
     height: 0.15rem;
@@ -323,7 +329,7 @@
 }
 .bg_5{
     display: inline-block;
-    background-image: url("../../../public/assets/imges/zab0be83e3b6d705799696374f5b4a69f.png");
+    background-image: url("../../../public/assets/images/zab0be83e3b6d705799696374f5b4a69f.png");
     background-size: 100% 100%;
     width: 0.28rem;
     height: 0.26rem;
@@ -333,7 +339,7 @@
 }
 .bg_6{
     display: inline-block;
-    background-image: url("../../../public/assets/imges/item_right_arrow.png");
+    background-image: url("../../../public/assets/images/item_right_arrow.png");
     background-size: 100% 100%;
     width: 0.13rem;
     height: 0.15rem;

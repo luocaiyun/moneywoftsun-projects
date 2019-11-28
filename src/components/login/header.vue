@@ -13,7 +13,7 @@ export default {
 <style scoped>
 .log-header{
     font-size: 0.22rem;
-    background-image: url("../../../public/assets/imges/login/3D34B463BBDDF148D9BD98145946CA09.jpg");
+    background-image: url("../../../public/assets/images/login/3D34B463BBDDF148D9BD98145946CA09.jpg");
     background-size: 100% 100%;
     height: 1.8rem;
 }

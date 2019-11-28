@@ -33,7 +33,6 @@
 .info-slide::-webkit-scrollbar {display:none}
     .info-slide-con{
         height: 100%;
-        height: 1.5rem;
         width: 13.5rem;
         display: flex;
         padding: 0 0.14rem 0 0.05rem;

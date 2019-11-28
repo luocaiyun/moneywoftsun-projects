@@ -23,7 +23,7 @@
             console.log(oTop);
             setInterval(function () {
                 oTop -= 0.8;
-                if (oTop <= -2.6){
+                if (oTop <= -2.4){
                     oTop = 0;
                 }
                 oNew.style.marginTop = oTop + 'rem';

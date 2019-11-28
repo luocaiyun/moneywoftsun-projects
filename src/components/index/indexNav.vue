@@ -1,6 +1,6 @@
 <template>
     <div class="index-nav-list">
-        <nav-item  :data="n" :key="i" v-for="(n,i) in data"></nav-item>
+        <nav-item  :data="n" :nid="i" :key="i" v-for="(n,i) in data"></nav-item>
     </div>
 </template>
 

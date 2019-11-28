@@ -5,11 +5,11 @@
             <a href="#" class="index-header-exit" ref="exit" @click="exit">退出</a>
             <input type="search" id="index-header-search" placeholder="搜功能  搜产品" @click="search">
             <a href="#" class="index-header-wx"></a>
-            <a href="#" class="index-header-add"></a>
+            <a href="#/luck" class="index-header-add"></a>
         </div>
         <index-banner></index-banner>
         <index-top v-if="navInfo" :data="navInfo.indexNews"></index-top>
-        <index-nav v-if="navInfo" :data="navInfo.indexItem"></index-nav>
+        <index-nav v-if="navInfo" :data="navInfo.data"></index-nav>
         <div class="index-date">
             <div class="index-date-week">
                 <div class="index-date-week-left">
@@ -21,6 +21,19 @@
                     <p>今天可以做的事，就不要拖到明天哟</p>
                 </div>
             </div>
+        </div>
+        <div class="index-club">
+            <div class="index-club-left">
+                <p>小夕俱乐部</p>
+                <p>全新权益快来体验</p>
+            </div>
+            <div class="index-club-right">
+                <a href="#">点击进入</a>
+            </div>
+        </div>
+        <div class="index-money">
+            <a href="#" class="index-money-left"></a>
+            <a href="#" class="index-money-right"></a>
         </div>
     </div>
 </template>
@@ -58,9 +71,17 @@
             },
             search(){
                 location.href = "#/search"
-            }
+            },
+            news(){
+                fetch("http://49.234.85.212:8080/ico/img/").then(res=>{
+                res.json().then(cb=>{
+                    console.log(cb);
+                });
+            })
+    }
         },
         created() {
+            this.news();
             this._initNavData();
             let data = new Date();
             let day = data.getDate();
@@ -201,7 +222,7 @@
     }
     .index-date{
         width: 100%;
-        height: 1.6rem;
+        height: 1.3rem;
         background-image: url("../../public/assets/images/index/index-bg.png");
         background-repeat: repeat-x;
     }
@@ -234,4 +255,73 @@
         box-sizing: border-box;
         padding-left: 0.2rem;
     }
+    .index-club{
+        width: 92%;
+        margin: 0 auto;
+        height: 0.9rem;
+        background-image: url("../../public/assets/images/index/club.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .index-club-left{
+        width: 64%;
+        text-align: left;
+        box-sizing: border-box;
+        padding-left: 0.1rem;
+    }
+    .index-club-left>p:nth-child(1){
+        font-size: 0.16rem;
+        font-weight: 700;
+        color: black;
+        font-family: 华文宋体;
+        line-height: 0.2rem;
+    }
+    .index-club-left>p:nth-child(2){
+        font-size: 0.14rem;
+        font-weight: bold;
+        line-height: 0.2rem;
+        color: gray;
+        font-family: 华文宋体;
+    }
+    .index-club-right{
+        width: 34%;
+        text-align: center;
+    }
+    .index-club-right>a{
+        display: block;
+        width: 1rem;
+        height: 0.3rem;
+        line-height: 0.28rem;
+        border: 1px solid gray;
+        border-radius: 0.2rem;
+        font-size: 0.14rem;
+        color: gray;
+    }
+    .index-money{
+        width: 92%;
+        margin: 0.1rem auto 0.6rem auto;
+        height: 0.9rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .index-money-left{
+        display: block;
+        height: 0.9rem;
+        width: 47%;
+        background-image: url("../../public/assets/images/index/mymoney1.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .index-money-right{
+        width: 45%;
+        display: block;
+        height: 0.9rem;
+        background-image: url("../../public/assets/images/index/mymoney2.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+     }
 </style>

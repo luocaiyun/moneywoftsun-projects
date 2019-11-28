@@ -1,6 +1,6 @@
 <template>
     <div class="info-head" v-if="data">
-        <p>{{data.title}}</p><a>{{data.more}}<img src="http://39.107.245.176/images/info/Screenshot_20191118_221356_com.xzck_03.png"></a>
+        <a href="#/BindingCard">{{data.title}}</a><a href="#/my_account">{{data.more}}<img src="http://39.107.245.176/images/info/Screenshot_20191118_221356_com.xzck_03.png"></a>
     </div>
 </template>
 
@@ -24,17 +24,18 @@
     padding: 0 0.14rem;
     box-sizing: border-box;
 }
-.info-head>a{
+.info-head>a:nth-child(2){
     display: flex;
+    color:gray ;
     justify-content: space-between;
     width: 20%;
 }
-.info-head>a>img{
+.info-head>a:nth-child(2)>img{
     width: 0.1rem;
     height: 0.15rem;
     margin-top: 0.168rem;
 }
-.info-head>p{
+.info-head>a:nth-child(1){
     color: black;
     font-size: 0.18rem;
 }

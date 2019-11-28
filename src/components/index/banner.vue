@@ -51,31 +51,31 @@
     .box1 {
         width: 100%;
         height: 2rem;
-        background-image: url("http://m.woftsun.com/res/img/cbanner1.jpg");
+        background-image: url("http://money.woftsun.com/res/img/cbanner1.jpg");
         background-size: 100% 100%;
     }
 
     .box2 {
         width: 100%;
         height: 2rem;
-        background-image: url("http://m.woftsun.com/res/img/cbanner2.jpg");
+        background-image: url("http://money.woftsun.com/res/img/cbanner2.jpg");
         background-size: 100% 100%;
     }
 
     .box3 {
         width: 100%;
         height: 2rem;
-        background-image: url("http://m.woftsun.com/res/img/cbanner3.jpg");
+        background-image: url("http://money.woftsun.com/res/img/cbanner3.jpg");
         background-size: 100% 100%;
     }
     .box4{
         width: 100%;
-        background-image: url("http://m.woftsun.com/res/img/cbanner4.jpg");
+        background-image: url("http://money.woftsun.com/res/img/cbanner4.jpg");
         background-size: 100% 100%;
     }
     .box5{
         width: 100%;
-        background-image: url("http://m.woftsun.com/res/img/cbanner5.jpg");
+        background-image: url("http://money.woftsun.com/res/img/cbanner5.jpg");
         background-size: 100% 100%;
     }
 </style>

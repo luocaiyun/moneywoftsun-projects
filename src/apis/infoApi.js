@@ -1,4 +1,4 @@
-import {BASEURL} from "../common/Config"
+import {BASEURL} from "../commons/fmfconfig"
 export default {
     async getInfoPage(){
         let res= await fetch(`${BASEURL}/info`);

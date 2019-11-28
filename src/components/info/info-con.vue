@@ -1,13 +1,13 @@
 <template>
     <div  v-if="data">
-        <a class="info-con" v-for="(val,index) in data" :key="index">
+        <a class="info-con"  v-for="(val,index) in data" :key="index">
             <div class="info-con-con">
                 <p>{{val.title}}</p>
-                <p>{{val.date}} <span v-if="number==0">
+                <p>{{val.date}} <span>
                 <img src="../../../public/assets/images/info/Screenshot_20191118_221341_com.xzck_07.png">{{val.num}}</span></p>
             </div>
             <img v-if="val.pic" :src="val.pic">
-            <img id="nulls" v-else-if="val.pic==''"  src="../../../public/assets/images/info/logo.png">
+            <img id="nulls" v-else-if="val.pic==''"  src="http://39.107.245.176/images/info/logo.png">
         </a>
     </div>
 </template>
@@ -31,14 +31,14 @@
                 this.number=a;
             })
         }
-
     }
 </script>
 
 <style scoped>
 .info-con{
-    padding: 0.1rem 0.1rem;
+    padding: 0.1rem;
     width: 100%;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     background-color: white;
