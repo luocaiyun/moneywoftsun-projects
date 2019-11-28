@@ -5,6 +5,7 @@ import Register from '../src/views/register'
 import setPass from '../src/views/setPass'
 
 
+--------------------->
 Vue.use(VueRouter)
 
 let router = new VueRouter({
